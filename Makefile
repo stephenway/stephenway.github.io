@@ -1,7 +1,7 @@
 NOW := $(shell date +"%c" | tr ' :' '__')
 
 compile:
-	harp compile _harp ./
+	NODE_ENV=production harp compile _harp ./
 
 deploy:
 	git add -A
