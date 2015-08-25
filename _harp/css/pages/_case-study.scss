@@ -1,0 +1,121 @@
+.case {
+  overflow: hidden;
+  position: relative;
+
+  picture img {
+    height: auto;
+    width: 100%;
+
+    @media #{$wide} {
+      height: inherit;
+      width: inherit;
+    }
+  }
+
+  .wide img {
+    @media #{$wide} {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .picture--half img {
+    @media #{$wide} {
+      max-width: 800px;
+      width: 50%;
+      display: inline;
+      float: left;
+      padding: 10px;
+    }
+  }
+
+  .picture--third img {
+    @media #{$wide} {
+      max-width: 600px;
+      width: 33.333%;
+      display: inline;
+      float: left;
+      padding: 10px;
+    }
+  }
+
+  .picture--quarter img {
+    @media #{$wide} {
+      max-width: 600px;
+      width: 25%;
+      display: inline;
+      float: left;
+      padding: 10px;
+    }
+  }
+
+  header {
+    text-align: center;
+  }
+
+  header, section {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__video {
+    height: inherit;
+  }
+
+  .video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+}
+
+.summary {
+  text-align: left;
+
+  h1 {
+    padding: 0 20px;
+    margin: -50px 0 25px;
+    font-weight: 100;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+
+  p {
+    font-weight: 100;
+  }
+
+  > div {
+    display: inline;
+    padding: 0 1.5em;
+    float: left;
+    margin-bottom: 20px;
+
+    @media #{$wide} {
+      width: 48%;
+    }
+
+  }
+
+  h2 {
+    @include font-size(16);
+  }
+
+  &__project {
+    margin-right: 20px;
+  }
+
+  &__role {
+  }
+
+}

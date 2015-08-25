@@ -1,0 +1,48 @@
+[role="contentinfo"] {
+  background-color: $white;
+  text-align: center;
+  padding: 5em 0 6em;
+}
+
+.gh-repos {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+
+  @media #{$wide} {
+    width: 80%;
+  }
+
+  li {
+    background: url('../images/octicon-repo.png') no-repeat 1em 50%;
+    background-size: 16px;
+    border-top: 1px solid transparentize($black, .75);
+    overflow: hidden;
+
+    &:first-child { border-top: none; }
+
+  }
+
+  a,
+  p {
+    float: left;
+  }
+
+  a { padding-right: 5px; }
+
+  p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 1em 0 3em;
+
+    &::before { content: ' - '; }
+
+  }
+
+}
+
+.more {
+  height: auto;
+}

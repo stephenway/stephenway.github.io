@@ -1,0 +1,21 @@
+$family-cap: Noto-Sans;
+$family: Noto Sans;
+$family-con: NotoSans;
+
+@mixin font-face(
+  $weight-name,
+  $weight-value,
+  $style
+) {
+  @font-face {
+    font-family: '#{$family}';
+    font-style: $style;
+    font-weight: $weight-value;
+    src: local('#{$family-cap}-#{$weight-name}'), local('#{$family-cap}-#{$weight-name}'), url(#{$family-con}-#{$weight-name}.woff2) format('woff2');
+  }
+}
+
+// @include font-face(Regular, 400, normal);
+// @include font-face(RegularItalic, 400, italic);
+@include font-face(Bold, 700, normal);
+// @include font-face(BoldItalic, 700, italic);

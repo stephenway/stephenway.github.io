@@ -1,0 +1,23 @@
+.case--bank-trend {
+  background-color: rgb(234, 233, 231);
+  header {
+    background-color: $white;
+  }
+}
+
+.picture-group {
+  text-align: center;
+  @media #{$wide} {
+    // margin-left: -70px;
+  }
+}
+
+.picture-group--3 {
+  width: 65%;
+  margin: 0 auto;
+
+  picture {
+    width: 32.5%;
+  }
+
+}

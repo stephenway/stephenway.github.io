@@ -1,0 +1,18 @@
+.dribbble {
+  .shots {
+    @extend %no-box;
+    clear: both;
+    list-style: none;
+    overflow: hidden;
+
+    li img {
+      background-color: $white;
+      width: 50%;
+      float: left;
+
+      @media #{$wide} {
+        width: 33.33%;
+      }
+    }
+  }
+}

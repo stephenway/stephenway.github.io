@@ -1,0 +1,13 @@
+<nav role="navigation" class="navigable" aria-label="Global Navigation">
+  <ul class="navigable__list">
+    <li class="navigable__page <%- current.source == 'index' ? 'navigable__page--active' : '' %>">
+      <a href="/">Home</a>
+    </li>
+    <li class="navigable__page <%- current.source == 'case-studies' ? 'navigable__page--active' : '' %>">
+      <a href="/">Case Studies</a>
+    </li>
+    <li class="navigable__page <%- current.source == 'contact' ? 'navigable__page--active' : '' %>">
+      <a href="mailto:<%= email %>">Contact</a>
+    </li>
+  </ul>
+</nav>

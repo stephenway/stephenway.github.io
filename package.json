@@ -1,0 +1,24 @@
+{
+  "name": "Harp-Gulp-And-BrowserSync",
+  "version": "0.0.1",
+  "description": "The dependencies needed for the HGB boilerplate",
+  "private": true,
+  "main": "gulpfile.js",
+  "author": "Charlie Gleason",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "browserify": "^11.0.1",
+    "gulp": "^3.9.0",
+    "harp": "^0.17.0"
+  },
+  "dependencies": {
+    "fastclick": "^1.0.6",
+    "jquery": "^2.1.4",
+    "picturefill": "^2.3.1",
+    "pace": "HubSpot/pace"
+  },
+  "scripts": {
+    "production": "NODE_ENV=production gulp"
+  }
+}

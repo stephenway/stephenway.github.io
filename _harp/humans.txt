@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Stephen Way -- Creator -- twitter.com/stephenway
+
+# THANKS
+
+    Steve M. Way
+    Kathryn Way
+    Josh McMurrin
+    John Aikman
+    Lucas Jans
+
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, Sass, HTML5, Javascript
+    jQuery, Modernizr, Harp.js, Browser-sync, Gulp

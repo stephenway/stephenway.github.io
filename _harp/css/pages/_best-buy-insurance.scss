@@ -1,0 +1,36 @@
+.case--best-buy {
+
+  header {
+    background-color: $grass;
+    color: $white;
+    position: relative;
+
+    &:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: transparentize($grass, .25);
+    }
+
+    picture {
+      overflow: hidden;
+      display: block;
+
+      @media #{$wide} {
+        margin-top: -270px;
+      }
+
+    }
+
+  }
+
+  .summary {
+    position: relative;
+    z-index: 10;
+  }
+
+}

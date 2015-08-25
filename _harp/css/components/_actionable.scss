@@ -1,0 +1,33 @@
+.actionable {
+  background-color: $green;
+  bottom: 1em;
+  color: $white;
+  font-size: 60px;
+  height: 60px;
+  line-height: 65px;
+  opacity: 1;
+  overflow: hidden;
+  position: fixed;
+  right: .75em;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: .3s;
+  user-select: none;
+  width: 60px;
+  z-index: 100;
+
+  @media #{$wide} {
+    bottom: 1em;
+    right: .75em;
+  }
+
+  .scrolling & {
+    opacity: 0;
+  }
+
+  .navigation & {
+    background-color: $white;
+    color: $green;
+  }
+
+}

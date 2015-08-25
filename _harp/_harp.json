@@ -1,0 +1,13 @@
+{
+  "_basicAuth": ["user:pass"],
+  "globals": {
+    "title": "Stephen Way",
+    "author": "Stephen Way",
+    "email": "stephen@stephenway.net",
+    "url": "http://www.stephenway.net",
+    "description": "My name is Stephen Way. I am an engineer and designer of the web.",
+    "gravatar": "http://www.gravatar.com/avatar/89624e6fdecae5864d5ab7787b5373ee",
+    "dribbble": "https://d13yacurqjgara.cloudfront.net/users/22037/screenshots",
+    "analytics": "UA-21546091-3"
+  }
+}

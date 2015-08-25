@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js <% if(environment == 'development') { %>wf-active<% } %>" lang="en-US">
+<head itemscope itemtype="http://schema.org/WebSite">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="Author" content="<%= author %>">
+  <link rel="canonical" href="<%= url %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title itemprop="name"><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <% if(environment == "production") { %>
+    <script src="//use.typekit.net/esl3jye.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <% } else { %>
+    <link rel="stylesheet" href="/fonts/proxima-nova.css">
+  <% } %>
+  <meta property="og:url" content="<%= url %>">
+  <meta property="og:image" content="<%= gravatar %>?s=716">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="<%= title %>">
+  <link itemprop="url" href="<%= url %>">
+  <link rel="home" href="<%= url %>">
+  <link id="favicon" rel="shortcut icon" type="image/x-icon" href="<%= gravatar %>?s=16">
+  <link rel="apple-touch-icon" href="<% gravatar %>?s=256">
+  <link rel="stylesheet" href="/css/main.css">
+  <% if(environment == "production") { %>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans:700">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" async></script>
+  <% } else { %>
+    <link rel="stylesheet" href="/fonts/noto-sans.css">
+    <script src="/js/modernizr.js" async></script>
+  <% } %>
+</head>
+<body>
+  <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <%- partial("partials/_loader") %>
+  <%- partial("partials/_navigation") %>
+
+  <%- yield %>
+
+  <%- partial("partials/_contentinfo") %>
+
+<% if(environment == "production") { %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/picturefill.min.js" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js" async></script>
+  <%- partial("partials/_analytics") %>
+<% } else { %>
+  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script src="/node_modules/pace/pace.js"></script>
+  <script src="/js/jquery.ba-throttle-debounce.min.js" async></script>
+  <script src="/node_modules/picturefill/dist/picturefill.js" async></script>
+  <script src="/node_modules/fastclick/lib/fastclick.js" async></script>
+<% } %>
+  <script src="/js/main.js" async></script>
+
+</body>
+</html>

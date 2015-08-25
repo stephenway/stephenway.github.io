@@ -1,0 +1,46 @@
+.navigable {
+  background-color: transparentize($green, .2);
+  color: $white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  transition-duration: .3s;
+  z-index: -1;
+  visibility: hidden;
+
+  &__page--active {
+    opacity: .5;
+  }
+
+  .navigation & {
+    opacity: 1;
+    visibility: visible;
+    z-index: 50;
+  }
+
+  a {
+    color: $white !important;
+    &:before {
+      background: $white !important;
+    }
+  }
+
+  ul {
+    @include font-size(48);
+    list-style: none;
+    padding-left: 3rem;
+  }
+
+}
+
+.navigation {
+  overflow: hidden;
+  header,
+  section,
+  footer {
+    filter: blur(5px);
+  }
+}

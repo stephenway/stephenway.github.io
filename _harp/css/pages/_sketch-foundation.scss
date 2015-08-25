@@ -1,0 +1,28 @@
+.case--sketch-foundation {
+
+  header {
+    background-color: #074e68;
+    color: $white;
+  }
+  
+  .case__photo {
+
+    &--twitter {
+
+      .case__image {
+        background: url('../images/sketch-foundation/sketch-foundation-twitter.png') no-repeat 50% 0;
+        background-size: cover;
+        position: absolute;
+        top: 220px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      hgroup {
+      }
+    }
+
+  }
+
+}

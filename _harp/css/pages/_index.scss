@@ -1,0 +1,193 @@
+.main__headlines {
+  position: relative;
+  top: 20vh;
+  @media #{$wide} {
+    top: 40vh;
+  }
+}
+
+[role='main'] {
+  background: url('../images/user-flow-art.png') no-repeat 50%;
+  background-size: cover;
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+  }
+}
+
+.study {
+  background-size: cover;
+  background-position: 50%;
+  color: $white;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  padding-top: 18vh !important;
+
+  img {
+    display: block;
+    margin: 0 auto 2em;
+    position: relative;
+    z-index: 10;
+  }
+
+  h4 {
+    position: relative;
+    z-index: 20;
+  }
+
+  h4, img {
+    margin-bottom: 20vh;
+  }
+
+  &--best-buy {
+    $blue: rgb(0, 160, 220);
+    $green: rgb(159, 209, 90);
+    $color: $blue;
+    background-color: $color;
+    background-image: url('../images/best-buy/best-buy-background-bw.jpg');
+
+    &:before {
+      content: '';
+      background-color: transparentize($color, .15);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+
+    h4 {
+      font-style: italic;
+      font-weight: 600;
+    }
+  }
+
+  &--bank-trend {
+    $blue: rgb(2, 32, 105);
+    $grey: rgb(234, 233, 231);
+    $color: $grey;
+    background-color: $color;
+    background-image: url('../images/bank-trend/bank-trend-bg.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+
+    // a { color: $blue; }
+  }
+
+  &--growth-analyzer {
+    $color: rgb(103, 163, 198);
+    background-color: $color;
+    background-image: url('../images/growth-analyzer/growth-analyzer-background.jpg');
+
+    h4 {
+      @include font-size(43);
+      text-shadow: 0 2px 6px rgba(0,0,0,.2);
+      font-family: "Noto Sans",sans-serif;
+      font-weight: 700;
+
+      @media #{$wide} {
+        @include font-size(53);
+      }
+    }
+
+    a {
+      @include font-size(15);
+
+      @media #{$wide} {
+        @include font-size(18);
+      }
+
+    }
+  }
+
+  &--crawmers-critterz {
+    $orange: rgb(255, 119, 0);
+    $color: $white;
+    background-color: $color;
+    background-image: url('../images/crawmers-critterz/crawmers-critterz-background.png');
+
+    &:before {
+      content: '';
+      background-color: transparentize($color, .05);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+
+    a {
+      color: $color;
+      background-color: $black;
+    }
+  }
+
+  &--scorecard {
+    $color: rgb(128, 218, 204);
+    background-color: $color;
+    background-image: url('../images/scorecard/scorecard-background.jpg');
+
+    &:before {
+      content: '';
+      background-color: transparentize($color, .15);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+
+      @media #{$wide} {
+        width: inherit;
+      }
+    }
+
+    // a { color: $color; }
+  }
+
+  &--sketch-foundation {
+    $color: $blue;
+    background-color: $white;
+
+    img {
+      height: 300px;
+      width: 100%;
+
+      @media #{$wide} {
+        width: inherit;
+      }
+    }
+
+    a {
+      color: $white;
+      background-color: $color;
+    }
+  }
+
+}
+
+.ar {
+  position: relative;
+  display: inline-block;
+  background: url('../images/growth-analyzer/ar-logo-small.png') no-repeat 50%;
+  text-indent: -999em;
+  overflow: hidden;
+  height: 35px;
+  width: 100%;
+}
+
+.bb {
+  position: relative;
+  display: inline-block;
+  background: url('../images/best-buy/best-buy_logo.png') no-repeat 50%;
+  text-indent: -999em;
+  overflow: hidden;
+  height: 65px;
+  width: 100%;
+}

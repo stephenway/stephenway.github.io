@@ -1,0 +1,6 @@
+<section class="blog-posts">
+<% for(var slug in public.posts._data){ %>
+  <h2><a href="/posts/<%= slug %>"><%= public.posts._data[slug].title %></a></h2>
+  <%- partial("posts/" + slug) %>
+<% }; %>
+</section>
