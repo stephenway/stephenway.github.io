@@ -83,8 +83,8 @@
     h4 {
       @include font-size(43);
       text-shadow: 0 2px 6px rgba(0,0,0,.2);
-      font-family: "Noto Sans",sans-serif;
-      font-weight: 700;
+      // font-family: "Noto Sans",sans-serif;
+      // font-weight: 700;
 
       @media #{$wide} {
         @include font-size(53);
