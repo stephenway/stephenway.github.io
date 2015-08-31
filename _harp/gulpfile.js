@@ -21,17 +21,17 @@ gulp.task('serve', function () {
     /**
      * Watch for scss changes, tell BrowserSync to refresh main.css
      */
-    gulp.watch("css/**/*.scss", function () {
-      reload("css/main.css", {stream: true});
+    gulp.watch("public/css/**/*.scss", function () {
+      reload("public/css/main.css", {stream: true});
     });
 
-    gulp.watch("js/**/*.js", function () {
-      reload("js/main.js", {stream: true});
+    gulp.watch("public/js/**/*.js", function () {
+      reload("public/js/main.js", {stream: true});
     });
     /**
      * Watch for all other changes, reload the whole page
      */
-    gulp.watch(["*.ejs", "partials/*.ejs"], function () {
+    gulp.watch(["public/*.ejs", "public/partials/*.ejs"], function () {
       reload();
     });
   })
