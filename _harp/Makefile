@@ -6,6 +6,9 @@ install:
 server:
 	cd _harp; gulp
 
+production:
+	cd _harp; NODE_ENV=production gulp
+
 compile:
 	NODE_ENV=production harp compile _harp ./
 
