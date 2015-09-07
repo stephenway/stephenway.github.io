@@ -3,6 +3,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var harp = require('harp');
 var imageOptim = require('gulp-imageoptim');
+var htmlmin = require('gulp-htmlmin');
 
 /**
  * Optimize source images with ImageOptim
@@ -12,6 +13,19 @@ gulp.task('images', function() {
     .pipe(imageOptim.optimize())
     .pipe(gulp.dest('public/images'));
 });
+
+/**
+ * Optimize html
+ */
+gulp.task('minify', function() {
+  return gulp.src('../*.html')
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      keepClosingSlash: true
+    }))
+    .pipe(gulp.dest('../'))
+});
+
 
 /**
  * Serve the Harp Site from the src directory
@@ -55,3 +69,4 @@ gulp.task('serve', function () {
  * launch BrowserSync & watch files.
  */
 gulp.task('default', ['serve']);
+gulp.task('optimize', ['minify']);
