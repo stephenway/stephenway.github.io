@@ -5,6 +5,15 @@ var harp = require('harp');
 var imageOptim = require('gulp-imageoptim');
 
 /**
+ * Optimize source images with ImageOptim
+ */
+gulp.task('images', function() {
+  return gulp.src('public/images/src/**/*')
+    .pipe(imageOptim.optimize())
+    .pipe(gulp.dest('public/images'));
+});
+
+/**
  * Serve the Harp Site from the src directory
  */
 gulp.task('serve', function () {
@@ -29,6 +38,9 @@ gulp.task('serve', function () {
     gulp.watch("public/js/**/*.js", function () {
       reload("public/js/main.js", {stream: true});
     });
+
+    gulp.watch("public/images/src/**/*", ['images']);
+
     /**
      * Watch for all other changes, reload the whole page
      */
@@ -38,14 +50,8 @@ gulp.task('serve', function () {
   })
 });
 
-gulp.task('images', function() {
-  return gulp.src('public/images/src/**/*')
-    .pipe(imageOptim.optimize())
-    .pipe(gulp.dest('public/images'));
-});
-
 /**
  * Default task, running `gulp` will fire up the Harp site,
  * launch BrowserSync & watch files.
  */
-gulp.task('default', ['images','serve']);
+gulp.task('default', ['serve']);
