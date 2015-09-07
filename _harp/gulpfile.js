@@ -8,7 +8,7 @@ var imageOptim = require('gulp-imageoptim');
  * Optimize source images with ImageOptim
  */
 gulp.task('images', function() {
-  return gulp.src('public/images/src/**/*')
+  return gulp.src('images/**/*')
     .pipe(imageOptim.optimize())
     .pipe(gulp.dest('public/images'));
 });
