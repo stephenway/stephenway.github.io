@@ -13,17 +13,17 @@ var github = (function(){
   return {
     showRepos: function(options){
       $.ajax({
-          url: "https://api.github.com/users/stephenway/repos?sort=pushed&callback=?"
+        url: "https://api.github.com/users/stephenway/repos?sort=pushed&callback=?"
         , dataType: 'jsonp'
         , error: function (err) { $('#gh_repos' + ' li.loading').addClass('error').text("Error loading feed"); }
         , success: function(data) {
-          var repos = [];
-          if (!data || !data.data) { return; }
-          for (var i = 0; i < data.data.length; i++) {
-            repos.push(data.data[i]);
-          }
-          repos.splice(8);
-          render('#gh_repos', repos);
+      var repos = [];
+      if (!data || !data.data) { return; }
+      for (var i = 0; i < data.data.length; i++) {
+        repos.push(data.data[i]);
+      }
+      repos.splice(8);
+      render('#gh_repos', repos);
         }
       });
     }

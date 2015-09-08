@@ -18,8 +18,10 @@
   <% } else { %>
     <link rel="stylesheet" href="/fonts/proxima-nova.css">
   <% } %>
+  <script src="/js/loadCSS.js"></script>
   <%- partial("partials/_critical") %>
-  <link rel="stylesheet" href="/css/main.css">
+  <script id="loadcss">loadCSS("/css/main.css", document.getElementById("loadcss"));</script>
+  <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
   <meta property="og:url" content="<%= url %>">
   <meta property="og:image" content="<%= gravatar %>?s=716">
   <meta property="og:type" content="website">
