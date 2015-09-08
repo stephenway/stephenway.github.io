@@ -1,7 +1,8 @@
 @import 'settings';
-@import 'layout/base';
-@import 'components/all';
-@import 'pages/index';
+@import 'utilities';
+
+@import 'layout/contentinfo';
+
 @import 'pages/case-study';
 @import 'pages/bank-trend-reporter';
 @import 'pages/best-buy-insurance';

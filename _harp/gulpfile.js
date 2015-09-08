@@ -4,6 +4,9 @@ var reload = browserSync.reload;
 var harp = require('harp');
 var imageOptim = require('gulp-imageoptim');
 var htmlmin = require('gulp-htmlmin');
+var penthouse = require('penthouse');
+var fs = require('fs');
+var cleanCSS = require('clean-css');
 
 /**
  * Optimize source images with ImageOptim
@@ -26,6 +29,22 @@ gulp.task('minify', function() {
     .pipe(gulp.dest('../'))
 });
 
+/**
+ * Inline intro.css
+ */
+gulp.task('penthouse', function() {
+   penthouse({
+       url: '../index.html',
+       css: '../css/intro.css',
+       width: 480,
+       height: 800
+   }, function (err, criticalCss) {
+       console.log(criticalCss);
+       console.log(err);
+       var clean = new cleanCSS().minify(criticalCss);
+       fs.writeFile('public/partials/_critical.ejs', '<style>' + clean + '</style>');
+   });
+});
 
 /**
  * Serve the Harp Site from the src directory

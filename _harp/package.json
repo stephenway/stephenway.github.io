@@ -9,10 +9,13 @@
   "devDependencies": {
     "browser-sync": "^2.8.2",
     "browserify": "^11.0.1",
+    "clean-css": "^3.4.1",
+    "fs": "0.0.2",
     "gulp": "^3.9.0",
     "gulp-htmlmin": "^1.1.4",
     "gulp-imageoptim": "^0.2.12",
-    "harp": "^0.17.0"
+    "harp": "^0.17.0",
+    "penthouse": "^0.3.6"
   },
   "dependencies": {
     "fastclick": "^1.0.6",

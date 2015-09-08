@@ -1,20 +1,6 @@
-%no-box {
-  margin: 0;
-  padding: 0;
-}
-
-@mixin font-size($sizeValue: 1.6, $line: $sizeValue * 1.5) {
-  font-size: ($sizeValue * 1) + px;
-  line-height: ($line * 1) + px;
-  font-size: ($sizeValue / 10) + rem;
-  line-height: ($line / 10) + rem;
-}
-
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
 ::-moz-selection {
   background: $highlight-yellow;
@@ -27,10 +13,10 @@
 }
 
 .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  background: $grey-c;
+  color: $black;
+  margin: .2em 0;
+  padding: .2em 0;
 }
 
 html { font-size: 62.5%; } // Base 10 Scale
@@ -46,9 +32,7 @@ body {
   font-weight: 300;
   text-rendering: optimizeLegibility;
 
-  .wf-active & {
-    font-family: 'proxima-nova', sans-serif;
-  }
+  .wf-active & { font-family: 'proxima-nova', sans-serif; }
 
 }
 
@@ -56,16 +40,12 @@ section {
   height: 100vh;
   padding: 0 2em;
 
-  &:not([role='main']) {
-    padding: 4em 2em;
-  }
+  &:not([role='main']) { padding: 4em 2em; }
 
   h3,
   h4,
   h5,
-  h6 {
-    text-align: center;
-  }
+  h6 { text-align: center; }
 
   h5 {
     @include font-size(32);
@@ -76,42 +56,39 @@ section {
 }
 
 a:not([role='button']):not(.actionable) {
+  backface-visibility: hidden;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   color: $green;
+  overflow: hidden;
+  position: relative;
   text-decoration: none;
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  position: relative;
-  overflow: hidden;
 
   &:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 100%;
-    bottom: 0;
     background: $green;
+    bottom: 0;
+    content: '';
     height: 3px;
+    left: 0;
+    position: absolute;
+    right: 100%;
+    transition-duration: .3s;
     transition-property: right;
-    transition-duration: 0.3s;
     transition-timing-function: ease-out;
+    z-index: -1;
   }
 
   &:hover:before,
   &:focus:before,
-  &:active:before {
-    right: 0;
-  }
+  &:active:before { right: 0; }
 
   &:hover {
-    picture img {
-      transform: scale(1);
-    }
+    picture img { transform: scale(1); }
   }
 
   picture {
     display: inline-block;
+
     img {
       transform: scale(.9);
       transition-duration: .3s;
@@ -135,9 +112,8 @@ h1,
 h2,
 .h2 {
   @include font-size(48);
-  @media #{$wide} {
-    @include font-size(62);
-  }
+
+  @media #{$wide} { @include font-size(62); }
 }
 
 h3,
@@ -145,14 +121,8 @@ h3,
 h4,
 .h4 {
   @include font-size(20);
-  @media #{$wide} {
-    @include font-size(26);
-  }
+
+  @media #{$wide} { @include font-size(26); }
 }
 
-.hide {
-  display: none;
-}
-
-@import "banner";
-@import "contentinfo";
+.hide { @extend %hide; }
