@@ -19,6 +19,6 @@ deploy:
 	git push -u origin master
 
 test:
-	perfbudget --url http://stephenway.net --key A.32baa584cf7c0a9647fcd4a61fbf117d
+	# phantomjs ~/bin/yslow.js --info grade --format tap http://stephenway.net
 	psi http://stephenway.net
-	phantomjs ~/bin/yslow.js --info grade --format tap http://stephenway.net
+	perfbudget --url http://stephenway.net --key A.32baa584cf7c0a9647fcd4a61fbf117d

@@ -1,7 +1,8 @@
 .case--sketch-foundation {
+  $sketch-foundation--bg-color: #074e68;
 
   header {
-    background-color: #074e68;
+    background-color: $sketch-foundation--bg-color;
     color: $white;
   }
   
@@ -19,8 +20,6 @@
         left: 0;
       }
 
-      hgroup {
-      }
     }
 
   }
